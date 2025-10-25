@@ -1,3 +1,6 @@
+window.bundleCrash = null;
+try {
+
 window.bundleError = null;
 try {
   // entire original bundle content below here
@@ -1212,3 +1215,8 @@ if (typeof initCheats !== 'undefined') window.initCheats = initCheats;
 if (typeof loadCheats !== 'undefined') window.loadCheats = loadCheats;
 if (typeof openCheatWindow !== 'undefined') window.openCheatWindow = openCheatWindow;
 console.log('📢 Cheat functions bound to window (mobile patch active).');
+
+} catch(e) {
+  window.bundleCrash = e;
+  console.error('🔥 Bundle crashed:', e);
+}
