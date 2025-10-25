@@ -1,3 +1,12 @@
+window.bundleError = null;
+try {
+  // entire original bundle content below here
+} catch(e) {
+  window.bundleError = e;
+  console.error('🔥 Bundle crashed:', e);
+}
+
+
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
